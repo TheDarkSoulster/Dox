@@ -58,12 +58,12 @@ m120 -6 c3 -9 -3 -11 -20 -7 -31 8 -52 -15 -43 -46 6 -17 12 -20 37 -15 21 4
 
 <style lang="ts" scoped>
   .dynamic-color-svg {
-    color: '{color.gray.900}';
+    color: black; /* Default color for the SVG */
   }
 
   @media (prefers-color-scheme: dark) {
     body.dark-mode .dynamic-color-svg {
-      color: '{color.gray.100}';
+      color: white; /* Color for the SVG in dark mode */
     }
   }
 </style>
