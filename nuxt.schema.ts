@@ -11,17 +11,17 @@ export default defineNuxtSchema({
        *
        * @studioIcon material-symbols:title
        */
-      title: 'Docus',
+      title: 'ExploreX Documentation',
       /**
        * The website title template, to overwrite the default one.
        */
-      titleTemplate: '%s · Docus',
+      titleTemplate: '%s · Explorex Documentation',
       /**
        * Website description, used for meta description.
        *
        * @studioIcon material-symbols:description
        */
-      description: 'The best place to start your documentation.',
+      description: 'ExploreX — Explore. Beyond Bounds.',
       /**
        * Cover image.
        *
@@ -30,7 +30,7 @@ export default defineNuxtSchema({
        * @studioIcon dashicons:cover-image
        * @studioInput file
        */
-      image: 'https://user-images.githubusercontent.com/904724/185365452-87b7ca7b-6030-4813-a2db-5e65c785bf88.png',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png',
 
       /**
        * Social links
@@ -152,7 +152,7 @@ export default defineNuxtSchema({
          *
          * Toggle links icons in the header.
          */
-        showLinkIcon: false,
+        showLinkIcon: true,
         /**
          * Paths to be excluded from header links.
          *
@@ -200,9 +200,9 @@ export default defineNuxtSchema({
            * Icon to show on credits
            * @formtype Icon
            */
-          icon: 'IconDocus',
-          text: 'Powered by Docus',
-          href: 'https://docus.dev'
+          icon: '▝▟',
+          text: 'Made by PIXL Studios',
+          href: 'https://example.com'
         },
         /**
          * Text links
