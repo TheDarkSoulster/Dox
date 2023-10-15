@@ -325,7 +325,10 @@ watch(Escape, () => {
           v-else
           class="search-results empty"
         >
-          No results found. Try another query
+          No results found. Try another query.
+          <br> — OR — <br>
+          Ask AI:
+          <iframe src="https://chat.vercel.ai/" width="100%" height="500px" frameborder="0" allow="encrypted-media" sandbox="allow-same-origin allow-scripts"></iframe>
         </div>
       </div>
     </div>
