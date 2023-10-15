@@ -1,12 +1,12 @@
 export default defineAppConfig({
   docus: {
-    title: 'Docus',
+    title: 'Explorex Documentation',
 
-    description: 'The best place to start your documentation.',
+    description: 'ExploreX — Explore. Beyond Bounds.',
 
-    url: 'https://docus.dev',
+    url: 'https://example.com',
 
-    image: 'https://user-images.githubusercontent.com/904724/185365452-87b7ca7b-6030-4813-a2db-5e65c785bf88.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png',
 
     socials: {},
 
@@ -15,7 +15,7 @@ export default defineAppConfig({
     header: {
       title: '',
       logo: false,
-      showLinkIcon: false,
+      showLinkIcon: true,
       fluid: false,
       exclude: []
     },
@@ -28,9 +28,9 @@ export default defineAppConfig({
 
     footer: {
       credits: {
-        icon: 'IconDocus',
-        text: 'Powered by Docus',
-        href: 'https://docus.dev'
+        icon: '▝▟',
+        text: 'Developed by PIXL Corporation',
+        href: 'https://example.com'
       },
       textLinks: [],
       iconLinks: [],
