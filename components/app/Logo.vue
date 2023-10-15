@@ -7,11 +7,9 @@
       height="100.000000pt"
       viewBox="0 0 400.000000 100.000000"
       preserveAspectRatio="xMidYMid meet"
-      :style="{ transform: isLargeScreen ? 'translate(-500.000000,100.000000) scale(0.100000,-0.100000)' : 'translate(0.000000,100.000000) scale(0.100000,-0.100000)' }"
-      fill="#6965db"
-      stroke="none"
+      class="dynamic-color-svg"
     >
-      <g>
+      <g :transform="isLargeScreen ? 'translate(-700.000000,100.000000) scale(0.100000,-0.100000)' : 'scale(0.100000,-0.100000)'" fill="#6965db" stroke="none">
         <path d="M1690 601 l0 -371 50 0 50 0 -2 368 -3 367 -47 3 -48 3 0 -370z"/>
 <path d="M153 699 c-51 -25 -89 -67 -116 -128 -15 -34 -18 -60 -15 -116 4 -91
 40 -155 112 -200 86 -53 227 -46 306 15 l25 19 -29 30 -29 30 -30 -21 c-45
@@ -74,7 +72,7 @@ export default {
   },
   methods: {
     checkScreenSize() {
-      this.isLargeScreen = window.innerWidth >= 1024; // Adjust the threshold for troubleshooting, if needed.
+      this.isLargeScreen = window.innerWidth >= 1024; // Adjust the threshold if required for troubleshooting
     }
   },
   beforeDestroy() {
@@ -88,5 +86,15 @@ export default {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+  }
+
+  .dynamic-color-svg {
+    /* Any other styles for the SVG */
+  }
+
+  @media (max-width: 1023px) {
+    .dynamic-color-svg {
+      transform: scale(0.1, -0.1);
+    }
   }
 </style>
