@@ -7,7 +7,7 @@
     viewBox="0 0 400.000000 100.000000"
     preserveAspectRatio="xMidYMid meet"
   >
-    <g transform="translate(-650.000000,100.000000) scale(0.100000,-0.100000)" fill="#6965db" stroke="none">
+    <g :transform="getTranslation" scale="0.100000,-0.100000" fill="#6965db" stroke="none">
       <path d="M1690 601 l0 -371 50 0 50 0 -2 368 -3 367 -47 3 -48 3 0 -370z"/>
 <path d="M153 699 c-51 -25 -89 -67 -116 -128 -15 -34 -18 -60 -15 -116 4 -91
 40 -155 112 -200 86 -53 227 -46 306 15 l25 19 -29 30 -29 30 -30 -21 c-45
@@ -55,6 +55,16 @@ m120 -6 c3 -9 -3 -11 -20 -7 -31 8 -52 -15 -43 -46 6 -17 12 -20 37 -15 21 4
     </g>
   </svg>
 </template>
+
+<script>
+export default {
+  computed: {
+    getTranslation() {
+      return window.innerWidth >= 1024 ? 'translate(-650.000000,100.000000)' : 'translate(0.000000,100.000000)';
+    }
+  }
+}
+</script>
 
 <style lang="ts" scoped>
   css({
