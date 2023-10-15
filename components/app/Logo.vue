@@ -1,16 +1,14 @@
 <template>
-  <div class="svg-container">
-    <svg
-      version="1.0"
-      xmlns="http://www.w3.org/2000/svg"
-      width="400.000000pt"
-      height="100.000000pt"
-      viewBox="0 0 400.000000 100.000000"
-      preserveAspectRatio="xMidYMid meet"
-      class="dynamic-color-svg"
-    >
-      <g :transform="isLargeScreen ? 'translate(-600.000000,100.000000) scale(0.100000,-0.100000)' : 'scale(0.100000,-0.100000)'" fill="#6965db" stroke="none">
-        <path d="M1690 601 l0 -371 50 0 50 0 -2 368 -3 367 -47 3 -48 3 0 -370z"/>
+  <svg
+    version="1.0"
+    xmlns="http://www.w3.org/2000/svg"
+    width="400.000000pt"
+    height="100.000000pt"
+    viewBox="0 0 400.000000 100.000000"
+    preserveAspectRatio="xMidYMid meet"
+  >
+    <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+      <path d="M1690 601 l0 -371 50 0 50 0 -2 368 -3 367 -47 3 -48 3 0 -370z"/>
 <path d="M153 699 c-51 -25 -89 -67 -116 -128 -15 -34 -18 -60 -15 -116 4 -91
 40 -155 112 -200 86 -53 227 -46 306 15 l25 19 -29 30 -29 30 -30 -21 c-45
 -32 -125 -36 -174 -9 -38 22 -83 76 -83 99 0 9 48 12 181 12 l182 0 -6 50
@@ -54,47 +52,18 @@ m120 -6 c3 -9 -3 -11 -20 -7 -31 8 -52 -15 -43 -46 6 -17 12 -20 37 -15 21 4
 36z"/>
 <path d="M3597 404 c-13 -13 -7 -55 9 -61 24 -9 51 23 38 45 -12 19 -36 27
 -47 16z"/>
-      </g>
-    </svg>
-  </div>
+    </g>
+  </svg>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isLargeScreen: false
-    };
-  },
-  mounted() {
-    this.checkScreenSize();
-    window.addEventListener('resize', this.checkScreenSize);
-  },
-  methods: {
-    checkScreenSize() {
-      this.isLargeScreen = window.innerWidth >= 1024; // Adjust the threshold
-    }
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.checkScreenSize);
-  }
-};
-</script>
-
 <style lang="ts" scoped>
-  .svg-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .dynamic-color-svg {
-    /* Any other styles for the SVG */
-  }
-
-  @media (max-width: 1023px) {
-    .dynamic-color-svg {
-      transform: scale(0.1, -0.1);
+  css({
+    svg: {
+      color: '{color.gray.900}',
+      height: 'inherit',
+      '@dark': {
+        color: '{color.gray.100}'
+      },
     }
-  }
+  })
 </style>
