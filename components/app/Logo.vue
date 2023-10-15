@@ -1,6 +1,5 @@
 <template>
 <svg
-    v-if="isLargeScreen"
     version="1.0"
     xmlns="http://www.w3.org/2000/svg"
     width="400.000000pt"
@@ -58,18 +57,13 @@ m120 -6 c3 -9 -3 -11 -20 -7 -31 8 -52 -15 -43 -46 6 -17 12 -20 37 -15 21 4
   </svg>
 </template>
 
-<script>
-export default {
-  computed: {
-    isLargeScreen() {
-      // Check the screen width and return true if it's larger than 768 pixels
-      return window.innerWidth > 768;
+<style lang="ts" scoped>
+  @media (max-width: 768px) {
+    svg {
+      display: none;
     }
   }
-}
-</script>
 
-<style lang="ts" scoped>
   css({
     svg: {
       color: '{color.gray.900}',
@@ -78,10 +72,5 @@ export default {
         color: '{color.gray.100}'
       },
     },
-    '@media (max-width: 768px)': {
-      svg: {
-        display: none;
-      }
-    }
   })
 </style>
