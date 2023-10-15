@@ -328,7 +328,18 @@ watch(Escape, () => {
           No results found. Try another query.
           <br> — OR — <br>
           Ask AI:
-          <iframe src="https://chat.vercel.ai/" width="100%" height="500px" frameborder="0" allow="encrypted-media" sandbox="allow-same-origin allow-scripts"></iframe>
+              <iframe id="chatFrame" src="https://chat.vercel.ai/" width="100%" height="500px" frameborder="0"></iframe>
+
+    <script>
+        var iframe = document.getElementById('chatFrame');
+        iframe.onload = function() {
+            var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+            var topbar = innerDoc.querySelector('.sticky.top-0');
+            if (topbar) {
+                topbar.style.display = 'none';
+            }
+        };
+    </script>
         </div>
       </div>
     </div>
