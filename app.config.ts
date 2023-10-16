@@ -29,7 +29,7 @@ export default defineAppConfig({
     footer: {
       credits: {
         icon: '▝▟',
-        text: 'Developed by PIXL Corporation',
+        text: '‎ ‎ ‎ ‎ Developed by PIXL Corporation',
         href: 'https://example.com'
       },
       textLinks: [],
